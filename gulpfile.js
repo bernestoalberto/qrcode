@@ -115,8 +115,8 @@ gulp.task('scripts', function() {
   var sources = ['app/scripts/*.js',
     'app/styleguide/wskComponentHandler.js', 'app/styleguide/**/*.js'];
   return gulp.src(sources)
-    .pipe($.concat('main.min.js'))
-    .pipe($.uglify({preserveComments: 'some'}))
+    .pipe($.concat('main.js'))
+    // .pipe($.uglify({preserveComments: 'some'}))
     // Output Files
     .pipe(gulp.dest('dist/scripts'))
     .pipe($.size({title: 'scripts'}));
